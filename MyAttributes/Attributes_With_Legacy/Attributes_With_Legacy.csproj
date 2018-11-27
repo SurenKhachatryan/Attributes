@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{10180A9B-4926-4C23-AC43-D081D49EE3C8}</ProjectGuid>
+    <ProjectGuid>{2ED1586B-9EDF-40C9-A2F3-33E918242439}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MyAttributes</RootNamespace>
-    <AssemblyName>MyAttributes</AssemblyName>
+    <RootNamespace>Attributes_With_Legacy</RootNamespace>
+    <AssemblyName>Attributes_With_Legacy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Reflection;
 
-namespace MyAttributes
+namespace Attributes_With_Legacy
 {
     [My("Tomi", Age = 55)]
     class Person
@@ -13,23 +12,21 @@ namespace MyAttributes
         }
     }
 
+    [My("Heno", Age = 28)]
+    [My("Messi", Age = 31)]
+    class kicker : Person
+    {
+
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            
-            Type tp = typeof(Person);
 
-            object[] obj = tp.GetCustomAttributes(false);
+            Type tp = typeof(kicker);
 
-            foreach (MyAttribute item in obj)
-            {
-                Console.WriteLine($"Name {item.Name} \nAge {item.Age}");
-            }
-
-            MethodInfo method = tp.GetMethod("ChildhoodCharacter");
-
-            obj = method.GetCustomAttributes(typeof(MyAttribute),false);
+            object[] obj = tp.GetCustomAttributes(typeof(MyAttribute),true);
 
             foreach (MyAttribute item in obj)
             {
