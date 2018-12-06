@@ -2,6 +2,11 @@
 
 namespace MyAttributes
 {
+    /// <summary>
+    /// AttributeTargets.All говорит о том, что наш атрибут можно использовать везде с методомы , с переменноми и т.г.д.
+    /// AllowMultiple = false говорит о том, что наш атрибут можно использовать 1 раз 
+    /// к примеру класс(и не только) может иметь 1 атрибут.
+    /// </summary>
     [AttributeUsage(AttributeTargets.All, AllowMultiple = false)]
 
     class MyAttribute : Attribute

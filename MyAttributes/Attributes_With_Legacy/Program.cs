@@ -23,11 +23,18 @@ namespace Attributes_With_Legacy
     {
         static void Main(string[] args)
         {
-
+            /// typeof сканирует класс kicker и возврашяет весь инфомацию 
+            /// о классе kicker и присваивает Type tp.
             Type tp = typeof(kicker);
+            
+            /// GetCustomAttributes возвращает массив атрибутов принадлежащий классу
+            /// MyAttribute катотые писваиваны к классам kicker и Person.
+            /// True означает что typeof возвраяет инфрмацию не только о kicker
+            /// но и о других классов от кторых класс kicker наследовон,
+            /// но True будет работать только тогда когда AllowMultiple присвоено True
+            object[] obj = tp.GetCustomAttributes(typeof(MyAttribute), true);
 
-            object[] obj = tp.GetCustomAttributes(typeof(MyAttribute),true);
-
+            
             foreach (MyAttribute item in obj)
             {
                 Console.WriteLine($"Name {item.Name} \nAge {item.Age}");
